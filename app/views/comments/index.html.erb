@@ -1,0 +1,12 @@
+<div id="comment_index">
+    <h1>Summary of Street Comments</h1>
+    <br>
+    <%=link_to "Enter a new comment", new_comment_path %>
+    <br>
+
+  <%@comments.each do |comment| %>
+
+     <%=render "comment_partial", comment: comment%>
+
+<% end %>
+</div>

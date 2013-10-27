@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Walktopus</title>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+    <script type = "text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkBTlajoNoxJY4quJt-fLmySLVcMaAYic&sensor=false"></script>
+  <script type="text/javascript" src="http://www.geocodezip.com/scripts/v3_epoly.js"></script>
+
+  <script type="text/javascript" src="public/scripts/v3_epoly.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cherry+Swash' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Baumans' rel='stylesheet' type='text/css'>
+
+  </head>
+      <body>
+          <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+          <meta charset = "utf-8">
+          <%= yield %>
+      </body>
+</html>

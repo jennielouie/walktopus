@@ -1,0 +1,26 @@
+<div id="index_page">
+    <h2>Here is a list of previous walk searches</h2>
+    <h4 style="text-align:center"><%=link_to "Enter a walk to preview", new_walk_path %></h4>
+ </div>
+
+        <div id="walk_summary">
+            <table>
+              <thead>
+                  <tr>
+                      <th>Walk ID</th>
+                      <th>Starting Location</th>
+                      <th>Ending Location</th>
+                  </tr>
+              </thead>
+
+              <tbody>
+              <% @walks.each do |walk| %>
+                 <tr>
+                    <td><a href="walks/<%=walk.id %>"><%=walk.id%></td>
+                    <td><%=walk.start%></td>
+                    <td><%=walk.end%></td>
+                  </tr>
+              <% end %>
+              </tbody>
+            </table>
+        </div>

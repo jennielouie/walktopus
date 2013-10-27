@@ -1,0 +1,19 @@
+<script type="text/javascript">
+var route_start="<%=@walk.start%>";
+var route_end="<%=@walk.end%>";
+</script>
+<script type="text/javascript" src="/walk_script.js"></script>
+
+<div id="walk_show">
+<a href="/walks/new" style="font-size: 16 px">Preview another walk /</a>
+<a href = "/comments/new" style="font-size: 16 px">Comment on a street on current walk / </a>
+<a href = "/walks" style="font-size: 24px">See all walks</a>
+<h1>Here's your walk</h1>
+</div>
+
+<div id="map-canvas"> </div>
+<div id="pano"></div>
+<div id="directions_box"></div>
+<div id="comment_box">Click on markers to see comments for selected street</div>
+
+</div>

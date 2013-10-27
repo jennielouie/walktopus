@@ -1,0 +1,16 @@
+
+<div id="walk_form">
+  <h1>Welcome to Walktopus Walk Preview Tool</h1>
+  <h2>Preview a New Walk</h2>
+  <%= form_for @walk do  |f|  %>
+  <%=f.label :start %> <br>
+
+    <%= f.text_field :start, :placeholder =>"Starting from?" %>
+    <br>
+    <%= f.label :end %> <br>
+    <%=f.text_field :end, :placeholder => "Ending where?" %>
+    <br>
+    <%= f.submit  "Show Preview" %>
+<% end %>
+<%=link_to "See all walks", walks_path %>
+</div>

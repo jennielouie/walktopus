@@ -1,0 +1,9 @@
+<h4>Search Results</h4>
+<%@comments.each do |comment| %>
+ <div>
+    <p>User: <%=comment.username%></p>
+    <p>Date: <%=comment.date%></p>
+    <p>Time of day: <%=comment.time_of_day%></p>
+    <p>Comment on this street: <%=comment.street_comment%></p>
+</div>
+<%end%>
