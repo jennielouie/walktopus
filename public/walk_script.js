@@ -67,20 +67,25 @@ function showMarkers (directionResult)
     var polyPoints = polyline.GetPointsAtDistance(200);
     var numPoints = 0;
     markerArray = [];
+
+    // set first point of markerArray to starting location
     var route = directionResult.routes[0];
     markerArray[numPoints] = route.legs[0].start_location;
     numPoints++;
 
+    // add all polypoints after the starting location
     for (var i = 0; i < polyPoints.length; i++)
     {
       markerArray[numPoints] = polyPoints[i];
       numPoints++;
     }
 
+    //add ending location as last point in markerArray
     var numLegs = route.legs.length;
     var numSteps = route.legs[numLegs-1].steps.length;
     markerArray[numPoints] = route.legs[numLegs-1].end_location;
     numPoints++;
+
 
     for (var i = 0; i < markerArray.length; i++)
           {
@@ -90,6 +95,7 @@ function showMarkers (directionResult)
                     map: mapVar
                   });
 
+            // set bearing at each marker.  If the last marker, use same bearing as the previous marker.  If first marker
             marker.myIndex = i;
 
             if (i < markerArray.length-1)
